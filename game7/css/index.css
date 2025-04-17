@@ -4,6 +4,7 @@ html, body {
     height: 100vh;
     background-color: transparent;
     font-family: 'Roboto', sans-serif;
+    background: #111;
 }
 
 .hack-wrap {

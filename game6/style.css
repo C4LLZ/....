@@ -9,6 +9,10 @@
     --success-background: rgba(14, 17, 26, 0.5);
 }
 
+body {
+    background: #111;
+}
+
 #screen {
     position: absolute;
     left: 50%;

@@ -17,6 +17,7 @@ src: url("../fonts/AsherPunkDemoVersion-06bf6491.ttf") format("truetype");
 
 body {
   display: none;
+  background: #111;
 }
 
 /* .container{
