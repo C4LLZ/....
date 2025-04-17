@@ -4,96 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FiveM Skillchecks</title>
-  <!-- Google Font for a modern look -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet" />
-  <style>
-    /* Reset some default browser styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #1e1e1e, #323232);
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    header {
-      padding: 20px;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.5);
-    }
-    header h1 {
-      font-size: 2em;
-      font-weight: 700;
-    }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px;
-      flex: 1;
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 8px;
-      padding: 20px;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 1.3em;
-    }
-    .card p {
-      font-size: 0.9em;
-      color: #ccc;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: rgba(0, 0, 0, 0.5);
-      font-size: 0.8em;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>FiveM Skillchecks</h1>
+    <h1>EchoRP Hacks</h1>
   </header>
+
   <main class="container">
-    <!-- Each card represents a separate game landing. Update the file paths as needed. -->
     <div class="card" onclick="navigateTo('game1/index.html')">
-      <h3>Game 1</h3>
-      <p>Test your reflexes with this challenge.</p>
-    </div>
-    <div class="card" onclick="navigateTo('game2/index.html')">
-      <h3>Game 2</h3>
-      <p>Challenge your accuracy and speed.</p>
+      <h3>Fleeca Green Card</h3>
+      <p>Greencard hack for Fleeca Banks. Click on different colors/shapes. Like Candy Crush!</p>
     </div>
     <div class="card" onclick="navigateTo('game3/index.html')">
-      <h3>Game 3</h3>
-      <p>Master the skillcheck in a timed challenge.</p>
+      <h3>Fleeca Red Dot Game</h3>
+      <p>Click the red dot's and enter the letter</p>
     </div>
-    <!-- You can add additional game cards below -->
+    <div class="card" onclick="navigateTo('game6/index.html')">
+      <h3>Fleeca Teller Door</h3>
+      <p>Keypad to open teller door</p>
+    </div>
+    <div class="card" onclick="navigateTo('game9/index.html')">
+      <h3>Fleeca Teller Computer</h3>
+      <p></p>
+    </div>
+    <div class="card" onclick="navigateTo('game4/index.html')">
+      <h3>Store Hack</h3>
+      <p>Click 1 to 20 while numbers change position</p>
+    </div>
+    <div class="card" onclick="toggleStoreHelper()">
+      <h3>Store Code Cracker</h3>
+      <p>Brute-force helper for 4-digit store codes</p>
+    </div>
+    <div class="card" onclick="navigateTo('game5/index.html')">
+      <h3>Thermite</h3>
+      <p></p>
+    </div>
+    <div class="card" onclick="navigateTo('game7/index.html')">
+      <h3>G6 Purple Card</h3>
+      <p></p>
+    </div>
+    <div class="card" onclick="navigateTo('game8/index.html')">
+      <h3>Color Hack</h3>
+      <p></p>
+    </div>
+    <div class="card" onclick="navigateTo('game2/index.html')">
+      <h3>New Game</h3>
+      <p>Unknown Location</p>
+    </div>
+
+
+    <!-- Store Helper Modal -->
+    <div id="storeHelperModal" class="modal">
+      <div class="modal-content">
+        <h2>Enter 4-digit Code</h2>
+        <input id="storeInput" maxlength="4" />
+        <br />
+        <button onclick="generateStoreCodes()">Generate</button>
+        <button onclick="closeStoreHelper()">Close</button>
+        <div id="storeOutput"></div>
+      </div>
+    </div>
   </main>
-  <footer>
-    &copy; 2025 FiveM Skillchecks. All rights reserved.
-  </footer>
-  <script>
-    // JavaScript navigation function for going to a selected game page
-    function navigateTo(url) {
-      window.location.href = url;
-    }
-  </script>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
