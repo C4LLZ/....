@@ -10,6 +10,45 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
     <body>
+        <div id="mode-selector" class="overlay">
+            <div class="modal">
+              <h2>Select Minigame</h2>
+              <button data-mode="paleto">Paleto (7×7,20,5,5s,10s)</button>
+              <button data-mode="vangies">Vangies (8×8,15,5,5s,15s)</button>
+              <button data-mode="vault">Vault   (8×8,15,5,5s,10s)</button>
+              <button data-mode="custom">Custom…</button>
+            </div>
+          </div>
+          <!-- Custom Configuration Overlay -->
+        <div id="custom-config" class="overlay hidden">
+            <div class="modal">
+            <h2>Custom Configuration</h2>
+            <label>
+                Grid Size:
+                <input type="number" id="custom-size" min="2" max="20" value="7">
+            </label>
+            <label>
+                Correct Blocks:
+                <input type="number" id="custom-correct" min="1" value="5">
+            </label>
+            <label>
+                Max Incorrect:
+                <input type="number" id="custom-incorrect" min="0" value="3">
+            </label>
+            <label>
+                Show Time (s):
+                <input type="number" id="custom-showtime" min="1" value="5">
+            </label>
+            <label>
+                Lose Time (s):
+                <input type="number" id="custom-losetime" min="1" value="10">
+            </label>
+            <div class="actions">
+                <button id="custom-back">Back</button>
+                <button id="custom-start">Start Game</button>
+            </div>
+            </div>
+        </div>
         <div class="container" style="display: none;">
             <div class="grid" id="grid">
                 <div class="block block-1"></div>
